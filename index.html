@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI Code Playground</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1> AI-Powered Online Code Playground</h1>
+    <p class="sub">HTML · CSS · JavaScript &nbsp;|&nbsp; ML Error Prediction + GenAI Debugging</p>
+  </header>
+
+  <main>
+    <section class="editor-pane">
+      <div class="tabs">
+        <button class="tab active" data-tab="html">HTML</button>
+        <button class="tab" data-tab="css">CSS</button>
+        <button class="tab" data-tab="js">JavaScript</button>
+      </div>
+      <textarea id="html" class="code active" spellcheck="false">&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;Edit me!&lt;/p&gt;</textarea>
+      <textarea id="css" class="code" spellcheck="false">h1 { color: #4f46e5; font-family: sans-serif; }
+p  { color: #555; }</textarea>
+      <textarea id="js" class="code" spellcheck="false">console.log("Hello from JS");</textarea>
+
+      <div class="actions">
+        <button id="runBtn">  Run</button>
+        <button id="predictBtn"> Predict Errors (ML)</button>
+        <button id="debugBtn"> AI Debug (GenAI)</button>
+      </div>
+    </section>
+
+    <section class="output-pane">
+      <h2>Live Preview</h2>
+      <iframe id="preview" sandbox="allow-scripts"></iframe>
+
+      <h2>Console</h2>
+      <pre id="console"></pre>
+
+      <h2>ML Prediction</h2>
+      <div id="prediction" class="card">Run prediction to see if your code looks error-free.</div>
+
+      <h2>GenAI Debugging Suggestions</h2>
+      <div id="debug" class="card">Click "AI Debug" to get suggestions.</div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Built by Sarayu · Naive Bayes + Generative AI · Flask backend</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
